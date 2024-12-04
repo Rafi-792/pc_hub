@@ -67,23 +67,23 @@ class _SignupPageState extends State<SignupPage> {
     }
 
     try {
-      // Firebase Authentication
+
       UserCredential userCredential = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email,
         password: password,
       );
 
-      // Optionally update the user's display name
+
       await userCredential.user?.updateDisplayName(fullName);
 
-      // Send email verification
+
       await userCredential.user?.sendEmailVerification();
 
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Sign Up Successful! Please verify your email.")),
+        const SnackBar(content: Text("Sign Up Successful!")),
       );
 
-      // Navigate to a different screen after successful sign-up
+
       Navigator.pop(context);
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -204,7 +204,7 @@ class _SignupPageState extends State<SignupPage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Checkbox(
-                                value: true, // Default checked
+                                value: true,
                                 onChanged: (value) {
                                   // Handle checkbox change
                                 },
@@ -218,7 +218,7 @@ class _SignupPageState extends State<SignupPage> {
                             ],
                           ),
                           const SizedBox(height: 20),
-                          // Sign Up Button
+
                           ElevatedButton(
                             onPressed: signUp,
                             style: ElevatedButton.styleFrom(
