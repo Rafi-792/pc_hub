@@ -15,7 +15,7 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController passwordController = TextEditingController();
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  // Function to handle login
+
   Future<void> signIn() async {
     String email = emailController.text.trim();
     String password = passwordController.text.trim();
