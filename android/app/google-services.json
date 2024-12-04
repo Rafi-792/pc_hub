@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "387854887613",
+    "project_id": "pchub-c355b",
+    "storage_bucket": "pchub-c355b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387854887613:android:62be5a856371052cea65d4",
+        "android_client_info": {
+          "package_name": "com.example.pc_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlRRb6Z3stAiFMcm1e_zOwN_VO2xgJWXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
