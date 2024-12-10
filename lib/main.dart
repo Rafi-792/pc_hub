@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pc_hub/firebase_options.dart';
 import 'src/pages/splash_screen.dart';
+import 'navigation_menu.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      //home: SplashScreen(),
+      home: NavigationMenu(),
     );
   }
 }

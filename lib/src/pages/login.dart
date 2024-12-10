@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'home_screen.dart';
 import 'sign_up.dart';
+import 'package:pc_hub/navigation_menu.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -31,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const NavigationMenu()),
       );
     } on FirebaseAuthException catch (e) {
       String message = e.message ?? "An error occurred";
